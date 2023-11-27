@@ -5,9 +5,11 @@
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_lead_view_form"/>
         <field name="arch" type="xml">
-            <field name="phone" position="after">
-                <field name="center_number"/>
-            </field>
+            <xpath expr="//field[@name='phone']" position="after">
+                <group>
+                    <field name="center_number" string="Center Number"/>
+                </group>
+            </xpath>
         </field>
     </record>
 
